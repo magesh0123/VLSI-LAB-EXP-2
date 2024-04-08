@@ -18,35 +18,28 @@ STEP:10 Double click on the Implement Design and double click on the Generate Pr
 STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
 **LOGIC DIAGRAM**
-
-ENCODER
+# ENCODER
 ![301734849-3cd1f95e-7531-4cad-9154-fdd397ac439e](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/fa882883-2e67-479b-a819-3eac5cb5fead)
 
 
-
-DECODER
+# DECODER
 ![301735010-45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/02726cc5-fca2-4bd1-bbcf-9b3f1eabd2e3)
-R
 
-
-
-MULTIPLEXER
+# MULTIPLEXER
 ![301735287-427f75b2-8e67-44b9-ac45-a66651787436](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/832ec041-3668-4bf7-a1d7-78bb0d72d36f)
 
-
-
-
-DEMULTIPLEXER
+# DEMULTIPLEXER
 ![301735386-1c45a7fc-08ac-4f76-87f2-c084e7150557](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/8eed2415-e7c0-4333-9e62-196da9a19469)
 
 
-
-MAGNITUDE COMPARATOR
+# MAGNITUDE COMPARATOR
 ![301735522-b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/fcc8fedc-cb20-4e7c-b696-adcdb4dcba3c)
 
 
 VERILOG CODE
+
 # 3To8Decoder
+```
 module decoder(input [2:0] a,output [7:0] d );
 assign d[0]=(~a[2])&(~a[1])&(~a[0]);
 assign d[1]=(~a[2])&(~a[1])&(a[0]);
@@ -57,10 +50,11 @@ assign d[5]=(a[2])&(~a[1])&(a[0]);
 assign d[6]=(a[2])&(a[1])&(~a[0]);
 assign d[7]=(a[2])&(a[1])&(a[0]);
 endmodule
+```
 
 
 # Demultiplexer 1To8
-
+```
 module demux(din,s,d);
 input din;
 input[2:0]s;
@@ -74,9 +68,10 @@ assign d[5]=(din&s[2]&~s[1]&s[0]);
 assign d[6]=(din&s[2]&s[1]&~s[0]);
 assign d[7]=(din&s[2]&s[1]&s[0]);
 endmodule
-
+```
 # Encoder8To3
 
+```
 module encoder_8_to_3(a0,a1,a2,d7,d6,d5,d4,d3,d2,d1,d0);
 input d7,d6,d5,d4,d3,d2,d1,d0;
 output a0,a1,a2;
@@ -84,9 +79,10 @@ or g1(a0,d1,d3,d5,d7);
 or g2(a1,d2,d3,d6,d7);
 or g3(a2,d4,d5,d6,d7);
 endmodule
+```
 
 # Magnitude Compartor
-
+```
 module comparator(a,b,eq,lt,gt);
 input [3:0] a,b;
 output reg eq,lt,gt;
@@ -112,8 +108,10 @@ gt = 1'b0;
 end
 end
 endmodule
+```
 
 # Multiplexer8To1
+```
 module mux(a,s,y);
 input [7:0]a;
 input [2:0]s;
@@ -133,6 +131,7 @@ always@({s ,a})
       endcase
    end
 endmodule
+```
 
 OUTPUT WAVEFORM
 #  ENCODER
@@ -151,7 +150,7 @@ OUTPUT WAVEFORM
 ![318358593-4a9e2670-3a8d-42fd-a755-f728c5a36b45](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/cbc09a3b-15f2-4a0f-9a5d-eb11c1e57a91)
 
 
-RESULT
+# RESULT
 simulation and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE is verified.
 
 
