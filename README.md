@@ -24,7 +24,7 @@ ENCODER
 
 
 
-DECODE
+DECODER
 ![301735010-45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/02726cc5-fca2-4bd1-bbcf-9b3f1eabd2e3)
 R
 
@@ -47,9 +47,7 @@ MAGNITUDE COMPARATOR
 
 VERILOG CODE
 # 3To8Decoder
-module decoder(
-   input [2:0] a,
-   output [7:0] d );
+module decoder(input [2:0] a,output [7:0] d );
 assign d[0]=(~a[2])&(~a[1])&(~a[0]);
 assign d[1]=(~a[2])&(~a[1])&(a[0]);
 assign d[2]=(~a[2])&(a[1])&(~a[0]);
