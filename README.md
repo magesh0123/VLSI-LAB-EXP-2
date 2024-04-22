@@ -1,13 +1,13 @@
  # simulation of ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR 
- AIM:
+# AIM:
  
      To simulate ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using VIVADO 2023.1.
 
-APPARATUS REQUIRED:
+# APPARATUS REQUIRED:
 
                   VIVADO 2023.1
 
-PROCEDURE:
+# PROCEDURE:
 
 1. Open Vivado: Launch Xilinx Vivado software on your computer.
 
@@ -29,25 +29,24 @@ PROCEDURE:
 **LOGIC DIAGRAM**
 # ENCODER
 ![301734849-3cd1f95e-7531-4cad-9154-fdd397ac439e](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/fa882883-2e67-479b-a819-3eac5cb5fead)
+# VERILOG CODE
+```
+module encoder_8_to_3(a0,a1,a2,d7,d6,d5,d4,d3,d2,d1,d0);
+input d7,d6,d5,d4,d3,d2,d1,d0;
+output a0,a1,a2;
+or g1(a0,d1,d3,d5,d7);
+or g2(a1,d2,d3,d6,d7);
+or g3(a2,d4,d5,d6,d7);
+endmodule
+```
+# OUTPUT WAVEFORM
+![318353110-a7497d75-f686-43b8-9357-69e59e14eea1](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/05ec9b4d-9070-4345-932f-b231d15ee1bf)
 
 
 # DECODER
 ![301735010-45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/02726cc5-fca2-4bd1-bbcf-9b3f1eabd2e3)
 
-# MULTIPLEXER
-![301735287-427f75b2-8e67-44b9-ac45-a66651787436](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/832ec041-3668-4bf7-a1d7-78bb0d72d36f)
-
-# DEMULTIPLEXER
-![301735386-1c45a7fc-08ac-4f76-87f2-c084e7150557](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/8eed2415-e7c0-4333-9e62-196da9a19469)
-
-
-# MAGNITUDE COMPARATOR
-![301735522-b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/fcc8fedc-cb20-4e7c-b696-adcdb4dcba3c)
-
-
-VERILOG CODE
-
-# 3To8Decoder
+# VERILOG CODE
 ```
 module decoder(input [2:0] a,output [7:0] d );
 assign d[0]=(~a[2])&(~a[1])&(~a[0]);
@@ -60,9 +59,41 @@ assign d[6]=(a[2])&(a[1])&(~a[0]);
 assign d[7]=(a[2])&(a[1])&(a[0]);
 endmodule
 ```
+# OUTPUT WAVEFORM
+![318353325-5f78d343-fc3a-4c1e-bfcf-f85bcc58a6e9](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/9e9cca30-a733-4aa8-a777-f0c742f2c5ba)
 
+# MULTIPLEXER
+![301735287-427f75b2-8e67-44b9-ac45-a66651787436](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/832ec041-3668-4bf7-a1d7-78bb0d72d36f)
 
-# Demultiplexer 1To8
+# VERILOG CODE 
+```
+module mux(a,s,y);
+input [7:0]a;
+input [2:0]s;
+output y;
+reg y;
+always@({s ,a})
+   begin
+      case(s)
+         3'b000: y=a[0];
+         3'b001: y=a[1];
+         3'b010: y=a[2];
+         3'b011: y=a[3];
+         3'b100: y=a[4];
+         3'b101: y=a[5];
+         3'b110: y=a[6];
+         3'b111: y=a[7];
+      endcase
+   end
+endmodule
+```
+# WAVEFORM OUTPUT
+![318353752-b5de5822-1f2c-4acd-acb3-1ec962776bfb](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/2cb4c5bb-4b2d-490a-bede-ae9dd80afa64)
+
+# DEMULTIPLEXER
+![301735386-1c45a7fc-08ac-4f76-87f2-c084e7150557](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/8eed2415-e7c0-4333-9e62-196da9a19469)
+
+# VERILOG CODE 
 ```
 module demux(din,s,d);
 input din;
@@ -78,19 +109,15 @@ assign d[6]=(din&s[2]&s[1]&~s[0]);
 assign d[7]=(din&s[2]&s[1]&s[0]);
 endmodule
 ```
-# Encoder8To3
 
-```
-module encoder_8_to_3(a0,a1,a2,d7,d6,d5,d4,d3,d2,d1,d0);
-input d7,d6,d5,d4,d3,d2,d1,d0;
-output a0,a1,a2;
-or g1(a0,d1,d3,d5,d7);
-or g2(a1,d2,d3,d6,d7);
-or g3(a2,d4,d5,d6,d7);
-endmodule
-```
+# WAVEFORM OUTPUT
+![318358035-5768add5-fee5-4c52-91c3-e3e3e72aa3ed](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/bc728cb1-db21-4278-b4eb-cabe9613a993)
 
-# Magnitude Compartor
+
+# MAGNITUDE COMPARATOR
+![301735522-b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/fcc8fedc-cb20-4e7c-b696-adcdb4dcba3c)
+
+# VERILOG CODE
 ```
 module comparator(a,b,eq,lt,gt);
 input [3:0] a,b;
@@ -118,46 +145,8 @@ end
 end
 endmodule
 ```
-
-# Multiplexer8To1
-```
-module mux(a,s,y);
-input [7:0]a;
-input [2:0]s;
-output y;
-reg y;
-always@({s ,a})
-   begin
-      case(s)
-         3'b000: y=a[0];
-         3'b001: y=a[1];
-         3'b010: y=a[2];
-         3'b011: y=a[3];
-         3'b100: y=a[4];
-         3'b101: y=a[5];
-         3'b110: y=a[6];
-         3'b111: y=a[7];
-      endcase
-   end
-endmodule
-```
-
-OUTPUT WAVEFORM
-#  ENCODER
-![318353110-a7497d75-f686-43b8-9357-69e59e14eea1](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/05ec9b4d-9070-4345-932f-b231d15ee1bf)
-
-# DECODER
-![318353325-5f78d343-fc3a-4c1e-bfcf-f85bcc58a6e9](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/9e9cca30-a733-4aa8-a777-f0c742f2c5ba)
-
- # MULTIPLEXER
-![318353752-b5de5822-1f2c-4acd-acb3-1ec962776bfb](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/2cb4c5bb-4b2d-490a-bede-ae9dd80afa64)
-
-# DEMULTIPLEXER
-![318358035-5768add5-fee5-4c52-91c3-e3e3e72aa3ed](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/bc728cb1-db21-4278-b4eb-cabe9613a993)
-
-# MAGNITUDE COMPARATOR
+# WAVEFORM OUTPUT
 ![318358593-4a9e2670-3a8d-42fd-a755-f728c5a36b45](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/cbc09a3b-15f2-4a0f-9a5d-eb11c1e57a91)
-
 
 # RESULT
 simulation and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE is verified.
