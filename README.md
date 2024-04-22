@@ -41,7 +41,6 @@ endmodule
 ```
 # OUTPUT WAVEFORM
 ![318353110-a7497d75-f686-43b8-9357-69e59e14eea1](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/05ec9b4d-9070-4345-932f-b231d15ee1bf)
-<img width="962" alt="2024-04-06 (14)" src="https://github.com/21004601/VLSI-LAB-EXP-2/assets/146088220/23716f0b-4361-47c5-ae9e-3b659a7dab3a">
 
 # DECODER
 ![301735010-45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/02726cc5-fca2-4bd1-bbcf-9b3f1eabd2e3)
@@ -61,7 +60,6 @@ endmodule
 ```
 # OUTPUT WAVEFORM
 ![318353325-5f78d343-fc3a-4c1e-bfcf-f85bcc58a6e9](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/9e9cca30-a733-4aa8-a777-f0c742f2c5ba)
-<img width="962" alt="2024-04-06 (10)" src="https://github.com/21004601/VLSI-LAB-EXP-2/assets/146088220/6dcbae55-3d36-4b19-8f2e-5816db32f735">
 
 # MULTIPLEXER
 ![301735287-427f75b2-8e67-44b9-ac45-a66651787436](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/832ec041-3668-4bf7-a1d7-78bb0d72d36f)
@@ -90,7 +88,6 @@ endmodule
 ```
 # WAVEFORM OUTPUT
 ![318353752-b5de5822-1f2c-4acd-acb3-1ec962776bfb](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/2cb4c5bb-4b2d-490a-bede-ae9dd80afa64)
-<img width="962" alt="2024-04-06 (18)" src="https://github.com/21004601/VLSI-LAB-EXP-2/assets/146088220/a36f53b6-d729-4b8c-85db-96bdd63d0034">
 
 # DEMULTIPLEXER
 ![301735386-1c45a7fc-08ac-4f76-87f2-c084e7150557](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/8eed2415-e7c0-4333-9e62-196da9a19469)
@@ -114,7 +111,6 @@ endmodule
 
 # WAVEFORM OUTPUT
 ![318358035-5768add5-fee5-4c52-91c3-e3e3e72aa3ed](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/bc728cb1-db21-4278-b4eb-cabe9613a993)
-<img width="962" alt="2024-04-06 (12)" src="https://github.com/21004601/VLSI-LAB-EXP-2/assets/146088220/6bca91d0-759b-4418-83ad-5e8156198a46">
 
 
 # MAGNITUDE COMPARATOR
