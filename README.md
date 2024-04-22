@@ -42,6 +42,9 @@ endmodule
 # OUTPUT WAVEFORM
 ![318353110-a7497d75-f686-43b8-9357-69e59e14eea1](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/05ec9b4d-9070-4345-932f-b231d15ee1bf)
 
+# RTL DESIGN
+<img width="764" alt="324391719-08f3ff7c-b9e5-469b-8bb8-53c980cd1ca0" src="https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/54ddc383-ee27-4cfb-b4e4-bcc3e2720b04">
+
 # DECODER
 ![301735010-45a5e6cf-bbe0-4fd5-ac84-e5ad4477483b](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/02726cc5-fca2-4bd1-bbcf-9b3f1eabd2e3)
 
@@ -60,6 +63,9 @@ endmodule
 ```
 # OUTPUT WAVEFORM
 ![318353325-5f78d343-fc3a-4c1e-bfcf-f85bcc58a6e9](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/9e9cca30-a733-4aa8-a777-f0c742f2c5ba)
+# RTL DESIGN
+<img width="766" alt="324391783-d3549f3d-02f0-47f0-ad57-e5022d165e3b" src="https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/2e4fd12c-b731-49f8-ad9d-370a70d33e8f">
+
 
 # MULTIPLEXER
 ![301735287-427f75b2-8e67-44b9-ac45-a66651787436](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/832ec041-3668-4bf7-a1d7-78bb0d72d36f)
@@ -89,6 +95,9 @@ endmodule
 # WAVEFORM OUTPUT
 ![318353752-b5de5822-1f2c-4acd-acb3-1ec962776bfb](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/2cb4c5bb-4b2d-490a-bede-ae9dd80afa64)
 
+# RTL DESIGN
+<img width="761" alt="324391413-85c03dbc-f941-4c48-9ddf-49f4ab5342c4" src="https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/d1c0f5dc-bfb6-4f7a-9eea-ad050207e06c">
+
 # DEMULTIPLEXER
 ![301735386-1c45a7fc-08ac-4f76-87f2-c084e7150557](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/8eed2415-e7c0-4333-9e62-196da9a19469)
 
@@ -112,6 +121,8 @@ endmodule
 # WAVEFORM OUTPUT
 ![318358035-5768add5-fee5-4c52-91c3-e3e3e72aa3ed](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/bc728cb1-db21-4278-b4eb-cabe9613a993)
 
+# RTL DESIGN
+<img width="767" alt="324391625-8e681a69-d96e-489a-bea1-b9e273d43b94" src="https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/38db4464-72f1-4155-ae71-93c6773a9a00">
 
 # MAGNITUDE COMPARATOR
 ![301735522-b2fe7a05-6bf7-4dcb-8f5d-28abbf7ea8c2](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/fcc8fedc-cb20-4e7c-b696-adcdb4dcba3c)
@@ -146,6 +157,9 @@ endmodule
 ```
 # WAVEFORM OUTPUT
 ![318358593-4a9e2670-3a8d-42fd-a755-f728c5a36b45](https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/cbc09a3b-15f2-4a0f-9a5d-eb11c1e57a91)
+
+# RTL DESIGN
+<img width="761" alt="324391559-581f136c-8f0f-40aa-981b-b8299e269f9d" src="https://github.com/magesh0123/VLSI-LAB-EXP-2/assets/162102402/4b937b7a-c5ec-43b3-8f7a-27ca463738b3">
 
 # RESULT
 simulation and synthesis ENCODER, DECODER, MULTIPLEXER, DEMULTIPLEXER, MAGNITUDE COMPARATOR using Xilinx ISE is verified.
